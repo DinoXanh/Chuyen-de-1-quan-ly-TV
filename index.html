@@ -8,141 +8,42 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <aside class="sidebar">
+        <div class="logo">
+            <h2>LIBRARY</h2>
+            <p>Quản lý thư viện</p>
+        </div>
 
-    <div class="container">
+        <nav class="menu">
+            <a href="#" class="menu-item active" data-page="home">Trang chủ</a>
+            <a href="#" class="menu-item" data-page="books">Quản lý sách</a>
+            <a href="#" class="menu-item" data-page="categories">Danh mục sách</a>
+            <a href="#" class="menu-item" data-page="borrow">Đang mượn</a>
+            <a href="#" class="menu-item" data-page="return">Đã trả sách</a>
+            <a href="#" class="menu-item" data-page="history">Lịch sử giao dịch</a>
+        </nav>
 
-        <aside class="sidebar">
-            <div class="logo">
-                <h2>LIBRARY</h2>
-                <p>Quản lý thư viện</p>
+        <div class="sidebar-bottom">
+            <p>Library Management</p>
+            <small>Hệ thống quản lý thư viện</small>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="topbar">
+            <div>
+                <h1 id="page-title">Trang chủ</h1>
+                <p>Hệ thống quản lý thư viện</p>
             </div>
 
-            <nav class="menu">
-                <p class="menu-title">TỔNG QUAN</p>
-                <a href="#" class="menu-item active" data-page="home">Trang chủ</a>
-
-                <p class="menu-title">QUẢN LÝ</p>
-                <a href="#" class="menu-item" data-page="books">Quản lý sách</a>
-                <a href="#" class="menu-item" data-page="categories">Danh mục sách</a>
-                <a href="#" class="menu-item" data-page="readers">Quản lý độc giả</a>
-                <a href="#" class="menu-item" data-page="borrow">Mượn sách</a>
-                <a href="#" class="menu-item" data-page="return">Trả sách</a>
-
-                <p class="menu-title">KHÁC</p>
-                <a href="#" class="menu-item" data-page="history">Lịch sử giao dịch</a>
-            </nav>
-
-            <div class="sidebar-bottom">
-                <button id="darkMode">Chế độ tối</button>
+            <div class="topbar-actions">
+                <input type="text" id="search" placeholder="Tìm kiếm...">
+                <button id="darkMode">Giao diện tối</button>
             </div>
-        </aside>
+        </header>
 
-        <main class="main-content">
-
-            <header class="topbar">
-                <div>
-                    <h2 id="pageTitle">Trang chủ</h2>
-                    <p>Hệ thống quản lý thư viện</p>
-                </div>
-
-                <div class="user-info">
-                    <span>Quản trị viên</span>
-                </div>
-            </header>
-
-            <section id="content">
-
-                <div class="welcome">
-                    <h2>Chào mừng đến với thư viện!</h2>
-                    <p>Quản lý và theo dõi hoạt động thư viện tại đây.</p>
-                </div>
-
-                <div class="statistics">
-
-                    <div class="stat-card">
-                        <p>Tổng số sách</p>
-                        <h2>1.250</h2>
-                        <span>Đầu sách hiện có</span>
-                    </div>
-
-                    <div class="stat-card">
-                        <p>Độc giả</p>
-                        <h2>320</h2>
-                        <span>Độc giả đăng ký</span>
-                    </div>
-
-                    <div class="stat-card">
-                        <p>Sách đang mượn</p>
-                        <h2>86</h2>
-                        <span>Lượt mượn hiện tại</span>
-                    </div>
-
-                    <div class="stat-card">
-                        <p>Sách quá hạn</p>
-                        <h2>12</h2>
-                        <span>Cần được xử lý</span>
-                    </div>
-
-                </div>
-
-                <div class="section-header">
-                    <h3>Sách mới cập nhật</h3>
-                    <input type="text" id="search" placeholder="Tìm kiếm sách...">
-                </div>
-
-                <div class="table-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Mã sách</th>
-                                <th>Tên sách</th>
-                                <th>Tác giả</th>
-                                <th>Danh mục</th>
-                                <th>Số lượng</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr>
-                                <td>S001</td>
-                                <td>Đắc Nhân Tâm</td>
-                                <td>Dale Carnegie</td>
-                                <td>Kỹ năng sống</td>
-                                <td>15</td>
-                            </tr>
-
-                            <tr>
-                                <td>S002</td>
-                                <td>Nhà Giả Kim</td>
-                                <td>Paulo Coelho</td>
-                                <td>Tiểu thuyết</td>
-                                <td>12</td>
-                            </tr>
-
-                            <tr>
-                                <td>S003</td>
-                                <td>Tuổi Trẻ Đáng Giá Bao Nhiêu</td>
-                                <td>Rosie Nguyễn</td>
-                                <td>Kỹ năng sống</td>
-                                <td>10</td>
-                            </tr>
-
-                            <tr>
-                                <td>S004</td>
-                                <td>Dế Mèn Phiêu Lưu Ký</td>
-                                <td>Tô Hoài</td>
-                                <td>Văn học</td>
-                                <td>20</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-            </section>
-
-        </main>
-
-    </div>
+        <section id="content"></section>
+    </main>
 
     <script src="js/menu.js"></script>
 </body>
